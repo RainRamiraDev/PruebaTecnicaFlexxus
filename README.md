@@ -11,7 +11,6 @@ Este repositorio contiene la solución a una prueba técnica compuesta por desaf
 - [4. Comparación de Arrays (JavaScript ES6)](#4-comparación-de-arrays-javascript-es6)
 - [5. Consultas SQL](#5-consultas-sql)
 - [6. API RESTful - Artículos](#6-api-restful---artículos)
-- 
 ---
 
 ## 1. Números Impares (JavaScript)
