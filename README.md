@@ -64,10 +64,16 @@ npm start
 Código de una sola línea que imprime los elementos de y que no están en x.
 ### 📂 Ubicación: `./04-diferencia-arrays`
 
-```js
-const x = ["n", "bro", "c", "|"];
-const y = ["d", "n", "l", "bro", "g"];
-console.log(y.filter(e => !x.includes(e)));
+▶️ Cómo ejecutar:
+
+```bash
+cd 04-diferencia-arrays
+```
+```bash
+npm install
+```
+```bash
+npm start
 ```
 
 ## 5. Consultas SQL
