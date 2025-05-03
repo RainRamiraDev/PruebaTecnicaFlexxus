@@ -1,0 +1,28 @@
+# Ignorar todos los node_modules dentro de cualquier subdirectorio
+**/node_modules/
+
+# Archivos de compilación de TypeScript
+**/dist/
+**/build/
+
+# Archivos generados por TypeScript
+**/*.tsbuildinfo
+
+# Archivos de configuración de editor
+.vscode/
+.idea/
+
+# Archivos del sistema operativo
+.DS_Store
+Thumbs.db
+
+# Archivos de logs
+npm-debug.log
+yarn-debug.log
+yarn-error.log
+
+# Archivos de entorno
+.env
+
+# Archivos de test
+coverage/
