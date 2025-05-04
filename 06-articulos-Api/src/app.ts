@@ -15,11 +15,6 @@ app.use(express.json());
 app.use(morgan('dev'));
 app.use(cors());
 
-app.get('/', (req: Request, res: Response) => {
-    console.log('Hola mundo');
-    res.send("Hola mundo");
-});
-
 app.use("/articulos", articulosRoutes);
 app.use("/user", userRoutes );
 app.use(errorHandler);

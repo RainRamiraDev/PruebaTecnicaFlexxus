@@ -14,6 +14,7 @@ requiredEnvVars.forEach((varName) => {
   }
 });
 
+// Configuramos la fuente de datos (DataSource) de TypeORM para conectarnos a una base de datos MySQL
 export const AppDataSource = new DataSource({
   type: "mysql",
   host: process.env.DB_HOST!,

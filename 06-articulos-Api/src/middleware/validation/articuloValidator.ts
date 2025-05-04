@@ -1,4 +1,3 @@
-// src/validators/articuloValidator.ts
 import Joi from "joi";
 
 export const crearArticuloSchema = Joi.object({

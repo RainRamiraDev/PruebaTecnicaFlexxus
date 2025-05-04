@@ -7,12 +7,12 @@ import { Like } from "typeorm";
 const repo = AppDataSource.getRepository(Articulo);
 
 export const crearNuevoArticuloService = async (nombre: string, marca: string) => {
-  // Verificar que nombre y marca no estén vacíos o solo tengan espacios
+
   if (!nombre.trim() || !marca.trim()) {
     throw new appError("Faltan datos para crear el artículo", 400);
   }
 
-  // Crear el artículo
+
   const articulo = repo.create({ nombre: nombre.trim(), marca: marca.trim() });
   return await repo.save(articulo);
 };

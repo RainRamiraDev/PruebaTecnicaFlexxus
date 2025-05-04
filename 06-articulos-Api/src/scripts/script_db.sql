@@ -1,9 +1,7 @@
--- Crear la base de datos
 CREATE DATABASE IF NOT EXISTS articulos_api;
 
 USE articulos_api;
 
--- Crear la tabla de artículos
 CREATE TABLE
     articulos (
         id INT AUTO_INCREMENT PRIMARY KEY,
