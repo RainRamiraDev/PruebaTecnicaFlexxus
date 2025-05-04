@@ -1,4 +1,3 @@
-// appError.ts (sin cambios, pero por si necesitas referenciarlo)
 export class appError extends Error {
   public statusCode: number;
   public isOperational: boolean;
