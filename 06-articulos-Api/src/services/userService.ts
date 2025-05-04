@@ -3,6 +3,7 @@ import jwt from "jsonwebtoken";
 import { User } from "../models/userModel";
 import { AppDataSource } from "../db/conexion";
 import dotenv from "dotenv";
+import{ appError } from "../middleware/appError"
 
 dotenv.config();
 
@@ -13,14 +14,14 @@ const userRepo = AppDataSource.getRepository(User);
 const JWT_SECRET = process.env.JWT_SECRET;
 
 if (!JWT_SECRET) {
-  throw new Error('JWT_SECRET no está definido en el archivo .env');
+  throw new appError('JWT_SECRET no está definido en el archivo .env', 500);
 }
 
 // Función para crear un token JWT
 export function createToken(payload: object): string {
   // Verificar que JWT_SECRET no sea undefined
   if (!JWT_SECRET) {
-    throw new Error('El secreto JWT no está disponible');
+    throw new appError('El secreto JWT no está disponible', 500);
   }
 
   // Generar el token JWT
@@ -33,7 +34,7 @@ export const registerUserService = async (email: string, password: string) => {
   // Verificar si el usuario ya existe
   const existingUser = await userRepo.findOneBy({ email });
   if (existingUser) {
-    throw new Error("El usuario ya existe");
+    throw new appError("El usuario ya existe",400);
   }
 
   // Crear un nuevo usuario
@@ -51,13 +52,13 @@ export const loginUserService = async (email: string, password: string) => {
   // Buscar al usuario por su email
   const user = await userRepo.findOneBy({ email });
   if (!user) {
-    throw new Error("Credenciales inválidas");
+    throw new appError("Credenciales inválidas", 401);
   }
 
   // Verificar la contraseña
   const passwordMatch = await bcrypt.compare(password, user.password);
   if (!passwordMatch) {
-    throw new Error("Credenciales inválidas");
+    throw new appError("Credenciales inválidas",401);
   }
 
   // Crear el token JWT
