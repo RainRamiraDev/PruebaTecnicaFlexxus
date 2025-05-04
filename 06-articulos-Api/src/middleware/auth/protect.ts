@@ -1,4 +1,4 @@
-// src/middleware/auth/protect.ts
+
 import { Request, Response, NextFunction } from "express";
 import jwt from "jsonwebtoken";
 
@@ -13,7 +13,7 @@ export const protect = (req: Request, res: Response, next: NextFunction) => {
 
   try {
     const decoded = jwt.verify(token, process.env.JWT_SECRET!) as { id: number; email: string };
-    req.user = decoded;  // Aquí debería ser reconocido correctamente ahora
+    req.user = decoded;
     next();
   } catch (err) {
     return res.status(401).json({ mensaje: "Token inválido o expirado" });
