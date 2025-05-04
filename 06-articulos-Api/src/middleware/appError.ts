@@ -7,8 +7,6 @@ export class appError extends Error {
     super(message);
     this.statusCode = statusCode;
     this.isOperational = isOperational;
-
-    // Mantiene el stack trace correcto en entornos de desarrollo
     Error.captureStackTrace(this, this.constructor);
   }
 }
