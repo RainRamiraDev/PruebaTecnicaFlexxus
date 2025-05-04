@@ -1,9 +1,9 @@
 import bcrypt from "bcrypt";
 import jwt from "jsonwebtoken";
-import { User } from "../models/userModel";
-import { AppDataSource } from "../db/conexion";
+import { User } from "../entities/userModel";
+import { AppDataSource } from "../config/conexion";
 import dotenv from "dotenv";
-import{ appError } from "../middleware/appError"
+import{ appError } from "../middleware/error/appError"
 
 dotenv.config();
 

@@ -1,7 +1,7 @@
 
-import { AppDataSource } from "../db/conexion";
-import{ appError } from "../middleware/appError"
-import { Articulo } from "../models/articuloModel";
+import { AppDataSource } from "../config/conexion";
+import{ appError } from "../middleware/error/appError"
+import { Articulo } from "../entities/articuloModel";
 import { Like } from "typeorm";
 
 const repo = AppDataSource.getRepository(Articulo);

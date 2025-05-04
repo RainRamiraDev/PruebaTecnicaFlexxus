@@ -1,6 +1,6 @@
 import { DataSource } from "typeorm";
-import { Articulo } from "../models/articuloModel";
-import { User } from "../models/userModel";
+import { Articulo } from "../entities/articuloModel";
+import { User } from "../entities/userModel";
 
 
 export const AppDataSource = new DataSource({
