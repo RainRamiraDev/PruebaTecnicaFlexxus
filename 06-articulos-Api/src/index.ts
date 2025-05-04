@@ -1,5 +1,5 @@
 import app from './app';
-import { AppDataSource } from './db/conexion';
+import { AppDataSource } from './config/conexion';
 
 async function main() {
     try {
@@ -13,7 +13,6 @@ async function main() {
             console.log(err.message);
         }
     }
-
 }
 
 main();
