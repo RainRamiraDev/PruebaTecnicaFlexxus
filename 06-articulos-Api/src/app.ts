@@ -2,6 +2,7 @@ import express, { Request, Response } from 'express';
 import cors from 'cors';
 import morgan from 'morgan';
 import articulosRoutes from './routes/articulosRoutes';
+import { errorHandler } from "./middleware/errorHandler"; // ajusta ruta si es necesario
 
 
 const app = express();
@@ -16,5 +17,8 @@ app.get('/', (req: Request, res: Response) => {
 });
 
 app.use("/articulos", articulosRoutes);
+
+app.use(errorHandler);
+
 
 export default app;

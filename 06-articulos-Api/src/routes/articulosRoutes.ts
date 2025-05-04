@@ -1,10 +1,10 @@
 import { Router } from "express";
-import { crearArticulo, listarArticulos, actualizarArticulo, desactivarArticulo } from "../controllers/articulosController";
+import { crearNuevoArticulo, filtrarArticulos, actualizarArticulo, desactivarArticulo } from "../controllers/articulosController";
 
 const router = Router();
 
-router.post("/", crearArticulo);
-router.get("/", listarArticulos);
+router.post("/", crearNuevoArticulo);
+router.get("/", filtrarArticulos);
 router.put("/:id", actualizarArticulo);
 router.delete("/:id", desactivarArticulo);
 
