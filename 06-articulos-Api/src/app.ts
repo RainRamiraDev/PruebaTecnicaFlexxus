@@ -2,7 +2,11 @@ import express, { Request, Response } from 'express';
 import cors from 'cors';
 import morgan from 'morgan';
 import articulosRoutes from './routes/articulosRoutes';
+import userRoutes from './routes/authRoutes';
 import { errorHandler } from "./middleware/errorHandler";
+import dotenv from 'dotenv';
+
+dotenv.config();
 
 
 const app = express();
@@ -17,7 +21,7 @@ app.get('/', (req: Request, res: Response) => {
 });
 
 app.use("/articulos", articulosRoutes);
-
+app.use("/user", userRoutes );
 app.use(errorHandler);
 
 

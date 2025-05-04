@@ -1,5 +1,7 @@
 import { DataSource } from "typeorm";
 import { Articulo } from "../models/articuloModel";
+import { User } from "../models/userModel";
+
 
 export const AppDataSource = new DataSource({
     type: "mysql",
@@ -9,6 +11,6 @@ export const AppDataSource = new DataSource({
     password: "1234",
     database: "articulos_api",
     logging: true,
-    entities: [Articulo],
+    entities: [Articulo, User],
     synchronize: false
 });
