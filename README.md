@@ -28,6 +28,9 @@ cd 01-numeros-impares
 npm install
 ```
 ```bash
+npm run tsc
+```
+```bash
 npm start
 ```
 ## 2. Sueldos de Operarios (TypeScript)
