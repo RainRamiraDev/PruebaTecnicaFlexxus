@@ -79,6 +79,9 @@ cd 04-diferencia-arrays
 npm install
 ```
 ```bash
+npm run tsc
+```
+```bash
 npm start
 ```
 
