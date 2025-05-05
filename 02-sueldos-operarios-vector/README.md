@@ -17,5 +17,8 @@ cd src
 ### 2. Ejecuta el algoritmo usando:
 
 ```bash
+npm run tsc
+```
+```bash
 npm start
 ```
