@@ -43,6 +43,9 @@ cd 02-sueldos-operarios-vector
 npm install
 ```
 ```bash
+npm run tsc
+```
+```bash
 npm start
 ```
 ## 3. Clase Alumno (TypeScript)
@@ -56,6 +59,9 @@ cd 03-clase-alumno-edad
 ```
 ```bash
 npm install
+```
+```bash
+npm run tsc
 ```
 ```bash
 npm start
